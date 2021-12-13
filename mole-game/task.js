@@ -7,12 +7,12 @@ let deadValue = 0; // начальное значение убитых крот�
 let lostValue = 0; // начальное значение промахов
 
 function countersReset () { // функция обнуления счётчиков
-  if ((deadValue === 3) || (lostValue === 10)) {  
+  
     deadValue = 0;
     dead.textContent = deadValue;
     lostValue = 0; 
     lost.textContent = lostValue;
-  };
+ 
 };
 
 function toggleDone (event) {
