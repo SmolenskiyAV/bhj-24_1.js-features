@@ -6,13 +6,13 @@ const lost = document.getElementById("lost"); // поиск элемента "П
 let deadValue = 0; // начальное значение убитых кротов
 let lostValue = 0; // начальное значение промахов
 
-function countersReset () { // функция обнуления счётчиков
+function countersReset (alertValue) { // функция обнуления счётчиков и вывода сообщения
   
     deadValue = 0;
     dead.textContent = deadValue;
     lostValue = 0; 
     lost.textContent = lostValue;
- 
+    alert(alertValue);
 };
 
 function toggleDone (event) {
@@ -23,16 +23,14 @@ function toggleDone (event) {
         deadValue++;
         dead.textContent = deadValue;
         if (deadValue === 3) { // условие победы
-            alert('Победа!');
-            countersReset();
+            countersReset('Победа!');
         };
     }
     else {                                          // условие промаха
         lostValue++;
         lost.textContent = lostValue;
         if (lostValue === 10) {  // условие поражения
-            alert('Вы проиграли!');
-            countersReset();
+            countersReset('Вы проиграли!');
         };
     };
 };

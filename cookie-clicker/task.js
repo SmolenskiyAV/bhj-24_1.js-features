@@ -17,7 +17,7 @@ cookie.addEventListener("mousedown", function() { // событие по наж�
 
 cookie.addEventListener("mouseup", function() {  // событие по отжатию левой кн.мыши
     releaseClickTime = new Date();
-    speedValue = (1000 / (releaseClickTime - pressClickTime)).toFixed(2);
+    speedValue = (1000 / (releaseClickTime - pressClickTime)).toFixed(2); // вычисление скорости клика за секунду
     cookie.width = 200;
     clicker__speed.textContent = speedValue;
 });
